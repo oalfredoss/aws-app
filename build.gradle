@@ -17,6 +17,8 @@ repositories {
 dependencies {
 	compile 'org.springframework.boot:spring-boot-starter-actuator'
 	compile 'org.springframework.boot:spring-boot-starter-web'
+	compile 'org.springframework.boot:spring-boot-starter-mail'
+	compile group: 'com.amazonaws', name: 'aws-java-sdk-ses', version: '1.11.538'
 	testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
 
