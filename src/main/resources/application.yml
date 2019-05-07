@@ -1,0 +1,12 @@
+server.port: 8081
+
+---
+spring:
+  application:
+    name: aws-app-example
+---
+info:
+  app:
+    name: aws-app-example
+    version: 0.0.1-snapshot
+    description: Aws app example.
