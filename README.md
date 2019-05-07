@@ -67,7 +67,7 @@ We write a @Service that uses `AmazonSimpleEmailService` to call the method send
       }
     }
 
-### Create a SesController to 
+### Create a SesController to create a message and send it
 In this simple Rest API,  we have an endpoint `/api/v1/sendEmail` that create a MimeMessage object from JavaMail library with the properties: SUBJECT, SENDER, RECIPIENT, BODY_HTML, ATTACHMENT_1 and ATTACHMENT_2. 
 In the SesController we use `SesService` to send the email. The class `MimeMessageBuilder` is a helper used to create a MimeMessage object.
     
