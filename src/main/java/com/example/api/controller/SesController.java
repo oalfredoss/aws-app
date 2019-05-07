@@ -41,6 +41,6 @@ public class SesController {
           .withBodyHtml(BODY_HTML)
           .withAttachments(attachments)
           .build();
-      Optional.ofNullable(message).ifPresent(m->sesService.sendAwsRawEmail(message));
+      Optional.ofNullable(message).ifPresent(m->sesService.sendAwsRawEmail(m));
     }
 }
