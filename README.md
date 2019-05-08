@@ -31,20 +31,20 @@ The AmazonSQSAsync bean is used to get a connection with AWS SQS, the QueueMessa
 
       @Bean
       public QueueMessagingTemplate queueMessagingTemplate() {
-          return new QueueMessagingTemplate(amazonSQS());
+          return new QueueMessagingTemplate(amazonSqs());
       }
 
       @Bean
       public SimpleMessageListenerContainerFactory simpleMessageListenerContainerFactory() {
           SimpleMessageListenerContainerFactory factory = new SimpleMessageListenerContainerFactory();
-          factory.setAmazonSqs(amazonSQS());
+          factory.setAmazonSqs(amazonSqs());
           factory.setMaxNumberOfMessages(1);
           factory.setVisibilityTimeout(10);
           return factory;
       }
 
       @Bean
-      public AmazonSQSAsync amazonSQS() {
+      public AmazonSQSAsync amazonSqs() {
         AmazonSQSAsync amazonSQSAsyncClient = AmazonSQSAsyncClient
             .asyncBuilder()
             .withRegion(Regions.US_EAST_1)
@@ -141,4 +141,3 @@ To send the message execute the following command:
     curl http://localhost:8081/api/v1/sendMessage
 
 As soon as you send the message the listener receives it. In the log you should see when the listener receives the message.
-
