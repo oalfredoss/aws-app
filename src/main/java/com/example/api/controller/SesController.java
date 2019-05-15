@@ -24,8 +24,8 @@ public class SesController {
     private static final String SENDER = "user@mail.com";
     private static final String RECIPIENT = "user@mail.com"; 
     private static final String BODY_HTML ="<html><body>Hello from AWS SES<p></p></body></html>";
-    private static final String ATTACHMENT_1 = "https://github.com/oalfredoss/aws-app/blob/aws-ses/file1.pdf";
-    private static final String ATTACHMENT_2 = "https://github.com/oalfredoss/aws-app/blob/aws-ses/file2.pdf";
+    private static final String ATTACHMENT_1 = "http://oalfredoss.com.s3-website.us-east-2.amazonaws.com/file1.pdf";
+    private static final String ATTACHMENT_2 = "http://oalfredoss.com.s3-website.us-east-2.amazonaws.com/file2.pdf";
     
     @Autowired
     SesService sesService;
